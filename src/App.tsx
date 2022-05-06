@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { QueryClientProvider, QueryClient } from "react-query";
-import { ReactQueryDevtools } from "react-query/devtools";
+// import { ReactQueryDevtools } from "react-query/devtools";
 import { ThemeProvider } from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
-import FlagList from "./components/FlagList";
 import FlagDetail from "./components/FlagDetail";
+import Home from "./pages/Home";
 
 import GlobalStyle from "./assets/wrappers/Global";
 
@@ -54,12 +54,12 @@ const App = () => {
         <BrowserRouter>
           <Header themeColor={themeColor} changeTheme={changeTheme} />
           <Routes>
-            <Route path="/" element={<FlagList />} />
+            <Route path="/" element={<Home />} />
             <Route path="/:country" element={<FlagDetail />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
-      <ReactQueryDevtools />
+      {/* <ReactQueryDevtools /> */}
     </QueryClientProvider>
   );
 };

@@ -36,6 +36,12 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     text-decoration: none;
     color: inherit;
   }
+
+  input, textarea, button {font-family: inherit}
+
+  ul {
+    list-style-type: none;
+  }
 `;
 
 export default GlobalStyle;

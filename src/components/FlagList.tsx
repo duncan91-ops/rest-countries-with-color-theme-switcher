@@ -1,5 +1,7 @@
+import Wrapper from "../assets/wrappers/FlagList";
+
 const FlagList = () => {
-  return <h1>FlagList</h1>;
+  return <Wrapper>FlagList</Wrapper>;
 };
 
 export default FlagList;
