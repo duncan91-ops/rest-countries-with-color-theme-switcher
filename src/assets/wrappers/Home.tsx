@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+const Wrapper = styled.main`
   padding: 3rem 5% 3rem;
 
   .inputs {
@@ -73,6 +73,7 @@ const Wrapper = styled.div`
     border-radius: 10px;
     padding: 2rem 5%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 1;
   }
 
   .region-name:not(:last-child) {

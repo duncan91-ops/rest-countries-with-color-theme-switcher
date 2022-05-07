@@ -2,6 +2,36 @@ import { useState } from "react";
 import { IoSearch, IoChevronDown } from "react-icons/io5";
 
 import Wrapper from "../assets/wrappers/Home";
+import FlagList from "../components/FlagList";
+
+export type Country = {
+  name: {
+    common: string;
+    official: string;
+    nativeName: {
+      [key: string]: {
+        common: string;
+      };
+    };
+  };
+  capital: string;
+  region: string;
+  subregion: string;
+  population: number;
+  flags: {
+    svg: string;
+  };
+  tld: string[];
+  currencies: {
+    [key: string]: {
+      name: string;
+      symbol: string;
+    };
+  };
+  languages: {
+    [key: string]: string;
+  };
+};
 
 const regions = ["Africa", "Asia", "Americas", "Europe", "Oceania"];
 
@@ -53,6 +83,7 @@ const Home = () => {
           )}
         </div>
       </div>
+      <FlagList />
     </Wrapper>
   );
 };
