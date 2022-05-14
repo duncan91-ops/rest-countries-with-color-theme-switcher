@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 
   .flag-box {
     width: 100%;
-    height: 30rem;
+    height: 25rem;
   }
 
   .flag-img {
@@ -57,6 +57,19 @@ const Wrapper = styled.div`
   .capital {
     font-size: 2rem;
     margin-bottom: 1rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: repeat(4, 1fr);
   }
 `;
 

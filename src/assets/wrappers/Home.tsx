@@ -90,6 +90,33 @@ const Wrapper = styled.main`
     font-size: 1.6rem;
     color: ${(props) => props.theme.text};
   }
+
+  @media screen and (min-width: 768px) {
+    .inputs {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .country {
+      width: 50%;
+      max-width: 50rem;
+    }
+
+    .region {
+      width: 40%;
+      max-width: 35rem;
+    }
+
+    .regions-btn {
+      padding: 2rem 10%;
+      max-width: 100rem;
+    }
+
+    .regions {
+      padding: 2.5rem 10%;
+      max-width: 100rem;
+    }
+  }
 `;
 
 export default Wrapper;
