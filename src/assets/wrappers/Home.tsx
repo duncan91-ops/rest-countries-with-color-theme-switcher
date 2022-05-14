@@ -23,17 +23,17 @@ const Wrapper = styled.main`
     color: ${(props) => props.theme.text};
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 
     &::placeholder {
       color: ${(props) => props.theme.text};
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       font-weight: 300;
     }
   }
 
   .search-icon {
-    font-size: 2rem;
+    font-size: 2.5rem;
     position: absolute;
     left: 5%;
     top: 50%;
@@ -59,7 +59,11 @@ const Wrapper = styled.main`
   }
 
   .btn-text {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+  }
+
+  .btn-icon {
+    font-size: 1.6rem;
   }
 
   .regions {
@@ -71,19 +75,19 @@ const Wrapper = styled.main`
     transform: translateY(105%);
     background-color: ${(props) => props.theme.elements};
     border-radius: 10px;
-    padding: 2rem 5%;
+    padding: 2.5rem 5%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     z-index: 1;
   }
 
   .region-name:not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .region-btn {
     width: 100%;
     text-align: left;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: ${(props) => props.theme.text};
   }
 `;

@@ -5,7 +5,7 @@ import { ThemeProvider } from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
-import FlagDetail from "./components/FlagDetail";
+import FlagDetail from "./pages/FlagDetail";
 import Home from "./pages/Home";
 
 import GlobalStyle from "./assets/wrappers/Global";

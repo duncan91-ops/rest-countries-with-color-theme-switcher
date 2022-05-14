@@ -1,30 +1,17 @@
-import { useQuery } from "react-query";
-import axios from "axios";
 import { Link } from "react-router-dom";
 
 import Wrapper from "../assets/wrappers/FlagList";
 import { Country } from "../pages/Home";
 
-const url = "https://restcountries.com/v3.1/";
-
-const fetchAllCountries = () => {
-  return axios.get(`${url}all`);
-};
-
-const FlagList = () => {
-  const { isLoading, data, isError } = useQuery(
-    "all_countries",
-    fetchAllCountries,
-    {
-      select: (data) => {
-        const countries: Country[] = data.data.map(
-          (country: Country) => country
-        );
-        return countries;
-      },
-    }
-  );
-
+const FlagList = ({
+  data,
+  isError,
+  isLoading,
+}: {
+  data: Country[];
+  isError: boolean;
+  isLoading: boolean;
+}) => {
   if (isLoading) {
     return <div className="loading">Loading...</div>;
   }
@@ -39,9 +26,11 @@ const FlagList = () => {
         data.map(({ name, population, region, capital, flags }: Country) => {
           return (
             <Link to={`/${name.common}`} key={name.common} className="flag">
-              <img src={flags.svg} alt="flag img" className="flag-img" />
+              <div className="flag-box">
+                <img src={flags.svg} alt="flag img" className="flag-img" />
+              </div>
               <div className="content">
-                <h2 className="name">{name.official}</h2>
+                <h2 className="name">{name.common}</h2>
                 <p className="population">
                   <span className="description">Population:</span>&nbsp;
                   {population}
